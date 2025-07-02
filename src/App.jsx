@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 const ProductItems = ({ image, title }) => {
   return (
-    <div>
-      <img src={image} alt={title} />
+    <div className="Products-list">
+      <img
+        src={image}
+        alt={title}
+        style={{ width: "100px", height: "100px" }}
+      />
       <span>{title}</span>
     </div>
   );
@@ -26,8 +31,8 @@ function App() {
   return (
     <>
       <div className="App">Pagination</div>
-      <div>
-        {products.map((p) => (
+      <div className="Products">
+        {products.slice(0, 10).map((p) => (
           <ProductItems key={p.id} image={p.thumbnail} title={p.title} />
         ))}
       </div>

@@ -1,6 +1,21 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+
+.Products{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.Products-list{
+  padding: 4rem;
+  border: solid black;
+  width: 100px;
+  height: 100px;
+}
+
